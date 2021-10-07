@@ -1,10 +1,9 @@
-﻿'Author: Casey Bement
-'Date: 09/23/2021
+﻿'Author: Kyle Loewenhagen
 'Purpose: Manage the Customer
+'Date: ##/##/####
 
 Option Strict On
 Option Explicit On
-
 Public Class Customer
     'Define Class or Module Level Variables
     Private mstrCustomerID As String
@@ -20,7 +19,7 @@ Public Class Customer
         Get
             Return mstrCustomerID
         End Get
-        Set(strValue As String)
+        Set(ByVal strValue As String)
             mstrCustomerID = strValue
         End Set
     End Property
@@ -29,7 +28,7 @@ Public Class Customer
         Get
             Return mstrFirstName
         End Get
-        Set(strValue As String)
+        Set(ByVal strValue As String)
             mstrFirstName = strValue
         End Set
     End Property
@@ -38,47 +37,52 @@ Public Class Customer
         Get
             Return mstrLastName
         End Get
-        Set(strValue As String)
+        Set(ByVal strValue As String)
             mstrLastName = strValue
         End Set
     End Property
+
     Public Property Address As String
         Get
             Return mstrAddress
         End Get
-        Set(strValue As String)
+        Set(ByVal strValue As String)
             mstrAddress = strValue
         End Set
     End Property
+
     Public Property City As String
         Get
             Return mstrCity
         End Get
-        Set(strValue As String)
+        Set(ByVal strValue As String)
             mstrCity = strValue
         End Set
     End Property
+
     Public Property State As String
         Get
             Return mstrState
         End Get
-        Set(strValue As String)
+        Set(ByVal strValue As String)
             mstrState = strValue
         End Set
     End Property
+
     Public Property Zip As String
         Get
             Return mstrZip
         End Get
-        Set(strValue As String)
+        Set(ByVal strValue As String)
             mstrZip = strValue
         End Set
     End Property
+
     Public Property Email As String
         Get
             Return mstrEmail
         End Get
-        Set(strValue As String)
+        Set(ByVal strValue As String)
             mstrEmail = strValue
         End Set
     End Property
@@ -113,10 +117,12 @@ Public Class Customer
     End Function
 
     Public Function City_State() As String
-        Return mstrCity & ", " & mstrState & " " & mstrZip
+        Return mstrCity & ", " & mstrState & "  " & mstrZip
     End Function
 
     Public Sub Calculate_Years(ByVal strCustomerDate As String, ByRef intYears As Integer)
         intYears = CInt(DateDiff(DateInterval.Year, CDate(strCustomerDate), Date.Now))
     End Sub
+
+
 End Class

@@ -22,10 +22,6 @@ Partial Class frmCustomerList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblCustomerYearsOutput = New System.Windows.Forms.Label()
-        Me.lblCustomerYears = New System.Windows.Forms.Label()
-        Me.txtCustomerSince = New System.Windows.Forms.TextBox()
-        Me.lblCustomerSince = New System.Windows.Forms.Label()
         Me.lblCityStateOutput = New System.Windows.Forms.Label()
         Me.lblStreetAddressOutput = New System.Windows.Forms.Label()
         Me.lblFullNameOutput = New System.Windows.Forms.Label()
@@ -48,38 +44,8 @@ Partial Class frmCustomerList
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.lblCustomerID = New System.Windows.Forms.Label()
         Me.lbxCustomers = New System.Windows.Forms.ListBox()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'lblCustomerYearsOutput
-        '
-        Me.lblCustomerYearsOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblCustomerYearsOutput.Location = New System.Drawing.Point(396, 426)
-        Me.lblCustomerYearsOutput.Name = "lblCustomerYearsOutput"
-        Me.lblCustomerYearsOutput.Size = New System.Drawing.Size(145, 23)
-        Me.lblCustomerYearsOutput.TabIndex = 50
-        '
-        'lblCustomerYears
-        '
-        Me.lblCustomerYears.Location = New System.Drawing.Point(294, 427)
-        Me.lblCustomerYears.Name = "lblCustomerYears"
-        Me.lblCustomerYears.Size = New System.Drawing.Size(97, 23)
-        Me.lblCustomerYears.TabIndex = 49
-        Me.lblCustomerYears.Text = "Number of Years"
-        '
-        'txtCustomerSince
-        '
-        Me.txtCustomerSince.Location = New System.Drawing.Point(134, 283)
-        Me.txtCustomerSince.Name = "txtCustomerSince"
-        Me.txtCustomerSince.Size = New System.Drawing.Size(144, 20)
-        Me.txtCustomerSince.TabIndex = 48
-        '
-        'lblCustomerSince
-        '
-        Me.lblCustomerSince.Location = New System.Drawing.Point(30, 286)
-        Me.lblCustomerSince.Name = "lblCustomerSince"
-        Me.lblCustomerSince.Size = New System.Drawing.Size(96, 17)
-        Me.lblCustomerSince.TabIndex = 47
-        Me.lblCustomerSince.Text = "Customer Since"
         '
         'lblCityStateOutput
         '
@@ -136,7 +102,7 @@ Partial Class frmCustomerList
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(144, 23)
         Me.btnSave.TabIndex = 40
-        Me.btnSave.Text = "Save"
+        Me.btnSave.Text = "Save Customer"
         Me.btnSave.UseVisualStyleBackColor = True
         '
         'txtZip
@@ -253,17 +219,24 @@ Partial Class frmCustomerList
         Me.lbxCustomers.Size = New System.Drawing.Size(244, 329)
         Me.lbxCustomers.TabIndex = 51
         '
+        'btnClear
+        '
+        Me.btnClear.ForeColor = System.Drawing.Color.Black
+        Me.btnClear.Location = New System.Drawing.Point(12, 329)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(94, 23)
+        Me.btnClear.TabIndex = 52
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
         'frmCustomerList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.RoyalBlue
-        Me.ClientSize = New System.Drawing.Size(584, 492)
+        Me.ClientSize = New System.Drawing.Size(584, 491)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.lbxCustomers)
-        Me.Controls.Add(Me.lblCustomerYearsOutput)
-        Me.Controls.Add(Me.lblCustomerYears)
-        Me.Controls.Add(Me.txtCustomerSince)
-        Me.Controls.Add(Me.lblCustomerSince)
         Me.Controls.Add(Me.lblCityStateOutput)
         Me.Controls.Add(Me.lblStreetAddressOutput)
         Me.Controls.Add(Me.lblFullNameOutput)
@@ -293,11 +266,6 @@ Partial Class frmCustomerList
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents lblCustomerYearsOutput As Label
-    Friend WithEvents lblCustomerYears As Label
-    Friend WithEvents txtCustomerSince As TextBox
-    Friend WithEvents lblCustomerSince As Label
     Friend WithEvents lblCityStateOutput As Label
     Friend WithEvents lblStreetAddressOutput As Label
     Friend WithEvents lblFullNameOutput As Label
@@ -320,4 +288,5 @@ Partial Class frmCustomerList
     Friend WithEvents lblFirstName As Label
     Friend WithEvents lblCustomerID As Label
     Friend WithEvents lbxCustomers As ListBox
+    Friend WithEvents btnClear As Button
 End Class
